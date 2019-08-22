@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d959e1f8-cf77-4728-9fc5-4a863a56d0a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/reading/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/reading/src/main/java/app/ReadingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/complete/reading/src/main/java/app/ReadingApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/reading/src/main/java/app/ShoppingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/complete/reading/src/main/java/app/ShoppingServiceHystrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/reading/src/test/java/app/ShoppingServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/complete/reading/src/test/java/app/ShoppingServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/shoppinglist/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/initial/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/initial/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/initial/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/initial/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/initial/reading/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/initial/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/initial/shoppinglist/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/ShoppinglistApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/ShoppinglistApplication.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +15,35 @@
     <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/ShoppinglistApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1054">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/model/Order.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/model/OrderRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -61,13 +72,15 @@
         <option value="$PROJECT_DIR$/initial/settings.gradle" />
         <option value="$PROJECT_DIR$/complete/reading/src/main/java/app/ShoppingService.java" />
         <option value="$PROJECT_DIR$/complete/shoppinglist/src/test/java/app/ShoppinglistApplicationTests.java" />
-        <option value="$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/ShoppinglistApplication.java" />
         <option value="$PROJECT_DIR$/complete/reading/src/test/java/app/ReadingApplicationTests.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/complete/reading/src/main/java/app/ShoppingServiceResilience4j.java" />
         <option value="$PROJECT_DIR$/complete/reading/src/main/java/app/ReadingApplication.java" />
         <option value="$PROJECT_DIR$/complete/reading/src/test/java/app/ShoppingServiceTests.java" />
         <option value="$PROJECT_DIR$/complete/reading/src/main/java/app/ShoppingServiceHystrix.java" />
+        <option value="$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/model/Order.java" />
+        <option value="$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/model/OrderRepository.java" />
+        <option value="$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/ShoppinglistApplication.java" />
       </list>
     </option>
   </component>
@@ -110,20 +123,20 @@
               <item name="studienprojekt" type="b2602c69:ProjectViewProjectNode" />
               <item name="studienprojekt" type="462c0819:PsiDirectoryNode" />
               <item name="complete" type="462c0819:PsiDirectoryNode" />
-              <item name="reading" type="462c0819:PsiDirectoryNode" />
+              <item name="shoppinglist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="studienprojekt" type="b2602c69:ProjectViewProjectNode" />
               <item name="studienprojekt" type="462c0819:PsiDirectoryNode" />
               <item name="complete" type="462c0819:PsiDirectoryNode" />
-              <item name="reading" type="462c0819:PsiDirectoryNode" />
+              <item name="shoppinglist" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="studienprojekt" type="b2602c69:ProjectViewProjectNode" />
               <item name="studienprojekt" type="462c0819:PsiDirectoryNode" />
               <item name="complete" type="462c0819:PsiDirectoryNode" />
-              <item name="reading" type="462c0819:PsiDirectoryNode" />
+              <item name="shoppinglist" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -131,7 +144,7 @@
               <item name="studienprojekt" type="b2602c69:ProjectViewProjectNode" />
               <item name="studienprojekt" type="462c0819:PsiDirectoryNode" />
               <item name="complete" type="462c0819:PsiDirectoryNode" />
-              <item name="reading" type="462c0819:PsiDirectoryNode" />
+              <item name="shoppinglist" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -140,11 +153,22 @@
               <item name="studienprojekt" type="b2602c69:ProjectViewProjectNode" />
               <item name="studienprojekt" type="462c0819:PsiDirectoryNode" />
               <item name="complete" type="462c0819:PsiDirectoryNode" />
-              <item name="reading" type="462c0819:PsiDirectoryNode" />
+              <item name="shoppinglist" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studienprojekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studienprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="complete" type="462c0819:PsiDirectoryNode" />
+              <item name="shoppinglist" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="studienprojekt" type="b2602c69:ProjectViewProjectNode" />
@@ -229,10 +253,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5985000" />
+    <option name="totallyTimeSpent" value="6979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20547946" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -415,13 +440,6 @@
     <entry file="file://$PROJECT_DIR$/complete/reading/src/main/java/app/ShoppingServiceResilience4j.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/complete/reading/src/main/java/app/ShoppingServiceHystrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/complete/reading/src/main/java/app/ReadingApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -443,13 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/ShoppinglistApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -486,6 +497,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/complete/reading/.mvn/wrapper/maven-wrapper.properties">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complete/reading/src/main/java/app/ShoppingServiceHystrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/model/OrderRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/model/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/ShoppinglistApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
