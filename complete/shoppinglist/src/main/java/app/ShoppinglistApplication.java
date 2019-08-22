@@ -11,7 +11,7 @@ public class ShoppinglistApplication {
 
   @RequestMapping(value = "/recommended")
   public String readingList(){
-    return "Spring in Action (Manning), Cloud Native Java (O'Reilly), Learning Spring Boot (Packt)";
+    return "Apfel, Birne, Salat";
   }
 
   public static void main(String[] args) {

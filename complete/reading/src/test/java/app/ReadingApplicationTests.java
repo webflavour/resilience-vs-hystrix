@@ -56,6 +56,6 @@ public class ReadingApplicationTests {
         this.server.expect(requestTo("http://localhost:8090/recommended")).
                 andExpect(method(HttpMethod.GET)).andRespond(withServerError());
         String lists = testRestTemplate.getForObject("/to-read", String.class);
-        assertThat(lists).isEqualTo("Cloud Native Java (O'Reilly)");
+        assertThat(lists).isEqualTo("Birne");
     }
 }

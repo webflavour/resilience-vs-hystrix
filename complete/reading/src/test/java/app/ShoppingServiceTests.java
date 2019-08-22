@@ -32,6 +32,6 @@ public class ShoppingServiceTests {
 
     @Test
     public void reliable() {
-        assertThat(shoppingService.reliable()).isEqualTo("Cloud Native Java (O'Reilly)");
+        assertThat(shoppingService.reliable()).isEqualTo("Birne");
     }
 }

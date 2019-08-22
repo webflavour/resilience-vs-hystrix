@@ -19,6 +19,6 @@ public class ShoppinglistApplicationTests {
     @Test
     public void recommendedTest() {
         String resp = rest.getForObject("/recommended", String.class);
-        assertThat(resp).isEqualTo("Spring in Action (Manning), Cloud Native Java (O'Reilly), Learning Spring Boot (Packt)");
+        assertThat(resp).isEqualTo("Apfel, Birne, Salat");
     }
 }

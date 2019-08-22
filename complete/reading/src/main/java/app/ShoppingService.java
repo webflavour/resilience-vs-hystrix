@@ -23,7 +23,7 @@ public class ShoppingService {
   }
 
   public String reliable() {
-    return "Cloud Native Java (O'Reilly)";
+    return "Birne";
   }
 
 }
