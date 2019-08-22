@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 public class ReadingApplication {
 
   @Autowired
-  private ShoppingService shoppingService;
+  private ShoppingServiceHystrix shoppingServiceHystrix;
 
   @Bean
   public RestTemplate rest(RestTemplateBuilder builder) {
@@ -25,7 +25,7 @@ public class ReadingApplication {
 
   @RequestMapping("/to-read")
   public String toRead() {
-    return shoppingService.readingList();
+    return shoppingServiceHystrix.readingList();
   }
 
   public static void main(String[] args) {

@@ -14,11 +14,11 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 
 
 @RunWith(SpringRunner.class)
-@RestClientTest(ShoppingService.class)
+@RestClientTest(ShoppingServiceHystrix.class)
 public class ShoppingServiceTests {
 
     @Autowired
-    private ShoppingService shoppingService;
+    private ShoppingServiceHystrix shoppingServiceHystrix;
 
     @Autowired
     private MockRestServiceServer server;
@@ -27,11 +27,11 @@ public class ShoppingServiceTests {
     public void readingListTest() {
         this.server.expect(requestTo("http://localhost:8090/recommended"))
                 .andRespond(withSuccess("lists", MediaType.TEXT_PLAIN));
-        assertThat(shoppingService.readingList()).isEqualTo("lists");
+        assertThat(shoppingServiceHystrix.readingList()).isEqualTo("lists");
     }
 
     @Test
     public void reliable() {
-        assertThat(shoppingService.reliable()).isEqualTo("Birne");
+        assertThat(shoppingServiceHystrix.reliable()).isEqualTo("Birne");
     }
 }

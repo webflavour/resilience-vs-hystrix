@@ -7,7 +7,7 @@ import org.springframework.web.client.RestTemplate;
 import java.net.URI;
 
 @Service
-public class ShoppingService {
+public class ShoppingServiceHystrix {
 
   private final RestTemplate restTemplate;
 
