@@ -26,8 +26,8 @@ public class ShoppingServiceTests {
     @Test
     public void readingListTest() {
         this.server.expect(requestTo("http://localhost:8090/recommended"))
-                .andRespond(withSuccess("books", MediaType.TEXT_PLAIN));
-        assertThat(shoppingService.readingList()).isEqualTo("books");
+                .andRespond(withSuccess("lists", MediaType.TEXT_PLAIN));
+        assertThat(shoppingService.readingList()).isEqualTo("lists");
     }
 
     @Test

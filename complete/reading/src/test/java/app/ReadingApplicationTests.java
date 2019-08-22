@@ -1,4 +1,4 @@
-package hello;
+package app;
 
 import org.junit.After;
 import org.junit.Before;
@@ -46,16 +46,16 @@ public class ReadingApplicationTests {
     public void toReadTest() {
         this.server.expect(requestTo("http://localhost:8090/recommended"))
                 .andExpect(method(HttpMethod.GET)).
-                andRespond(withSuccess("books", MediaType.TEXT_PLAIN));
-        String books = testRestTemplate.getForObject("/to-read", String.class);
-        assertThat(books).isEqualTo("books");
+                andRespond(withSuccess("lists", MediaType.TEXT_PLAIN));
+        String lists = testRestTemplate.getForObject("/to-read", String.class);
+        assertThat(lists).isEqualTo("lists");
     }
 
     @Test
     public void toReadFailureTest() {
         this.server.expect(requestTo("http://localhost:8090/recommended")).
                 andExpect(method(HttpMethod.GET)).andRespond(withServerError());
-        String books = testRestTemplate.getForObject("/to-read", String.class);
-        assertThat(books).isEqualTo("Cloud Native Java (O'Reilly)");
+        String lists = testRestTemplate.getForObject("/to-read", String.class);
+        assertThat(lists).isEqualTo("Cloud Native Java (O'Reilly)");
     }
 }
