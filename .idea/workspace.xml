@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d959e1f8-cf77-4728-9fc5-4a863a56d0a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/reading/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/reading/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/reading/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/reading/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/reading/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/reading/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/reading/src/main/java/app/ReadingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/reading/src/main/java/app/ReadingApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/reading/src/main/java/app/ShoppingServiceHystrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/reading/src/main/java/app/ShoppingServiceHystrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/reading/src/main/java/app/ShoppingServiceResilience4j.java" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/reading/src/main/java/app/ShoppingServiceResilience4j.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/reading/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/reading/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/reading/src/test/java/app/ReadingApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/reading/src/test/java/app/ReadingApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/reading/src/test/java/app/ShoppingServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/reading/src/test/java/app/ShoppingServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/shoppinglist/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/shoppinglist/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/shoppinglist/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/shoppinglist/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/shoppinglist/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/shoppinglist/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/ShoppinglistApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/shoppinglist/src/main/java/app/ShoppinglistApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/shoppinglist/src/main/java/app/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/shoppinglist/src/main/java/app/model/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/shoppinglist/src/main/java/app/model/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/shoppinglist/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/shoppinglist/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/complete/shoppinglist/src/test/java/app/ShoppinglistApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/HystrixExample/shoppinglist/src/test/java/app/ShoppinglistApplicationTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="d959e1f8-cf77-4728-9fc5-4a863a56d0a1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,11 +32,6 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
-  </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -79,6 +50,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HFischer\Documents\studienprojekt\Frontend" />
       <recent name="C:\Users\HFischer\Documents\studienprojekt\Backend" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -134,7 +106,7 @@
       <updated>1566465115091</updated>
       <workItem from="1566465116758" duration="703000" />
       <workItem from="1566465931028" duration="545000" />
-      <workItem from="1566483426015" duration="254000" />
+      <workItem from="1566483426015" duration="495000" />
     </task>
     <servers />
   </component>
