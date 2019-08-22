@@ -1,4 +1,4 @@
-package hello;
+package app;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,11 +14,11 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 
 
 @RunWith(SpringRunner.class)
-@RestClientTest(BookService.class)
-public class BookServiceTests {
+@RestClientTest(ShoppingService.class)
+public class ShoppingServiceTests {
 
     @Autowired
-    private BookService bookService;
+    private ShoppingService shoppingService;
 
     @Autowired
     private MockRestServiceServer server;
@@ -27,11 +27,11 @@ public class BookServiceTests {
     public void readingListTest() {
         this.server.expect(requestTo("http://localhost:8090/recommended"))
                 .andRespond(withSuccess("books", MediaType.TEXT_PLAIN));
-        assertThat(bookService.readingList()).isEqualTo("books");
+        assertThat(shoppingService.readingList()).isEqualTo("books");
     }
 
     @Test
     public void reliable() {
-        assertThat(bookService.reliable()).isEqualTo("Cloud Native Java (O'Reilly)");
+        assertThat(shoppingService.reliable()).isEqualTo("Cloud Native Java (O'Reilly)");
     }
 }

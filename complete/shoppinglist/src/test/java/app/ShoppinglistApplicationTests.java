@@ -1,4 +1,4 @@
-package hello;
+package app;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment= SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class BookstoreApplicationTests {
+public class ShoppinglistApplicationTests {
 
     @Autowired
     private TestRestTemplate rest;
