@@ -3,10 +3,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>app</groupId>
-  <artifactId>shoppinglist</artifactId>
+  <groupId>org.app</groupId>
+  <artifactId>hystrix</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
+  <name>hystrix</name>
+
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -17,11 +19,19 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <start-class>app.HystrixShoppingListApplication</start-class>
     <java.version>1.8</java.version>
-    <resilience4j.version>0.13.2</resilience4j.version>
   </properties>
 
   <dependencies>
+
+    <dependency>
+      <groupId>com.netflix.hystrix</groupId>
+      <artifactId>hystrix-core</artifactId>
+      <optional>true</optional>
+    </dependency>
+
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
@@ -33,24 +43,24 @@
       <scope>test</scope>
     </dependency>
 
-
-
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter</artifactId>
+      <version>1.0.0.BUILD-SNAPSHOT</version>
+    </dependency>
 
     <dependency>
-      <groupId>io.github.resilience4j</groupId>
-      <artifactId>resilience4j-spring-boot</artifactId>
-      <version>${resilience4j.version}</version>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-hystrix</artifactId>
+      <version>1.0.0.BUILD-SNAPSHOT</version>
     </dependency>
+
     <dependency>
-      <groupId>io.github.resilience4j</groupId>
-      <artifactId>resilience4j-metrics</artifactId>
-      <version>${resilience4j.version}</version>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+      <version>1.0.0.BUILD-SNAPSHOT</version>
     </dependency>
-    <dependency>
-      <groupId>io.github.resilience4j</groupId>
-      <artifactId>resilience4j-circuitbreaker</artifactId>
-      <version>0.12.1</version>
-    </dependency>
+
 
   </dependencies>
   

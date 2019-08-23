@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @SpringBootApplication
 @CrossOrigin
 
-public class ShoppinglistApplication {
+public class HystrixShoppinglistApplication {
 
  @Autowired
     OrderRepository orderRepository;
@@ -61,6 +61,6 @@ public class ShoppinglistApplication {
        }
 
   public static void main(String[] args) {
-    SpringApplication.run(ShoppinglistApplication.class, args);
+    SpringApplication.run(HystrixShoppinglistApplication.class, args);
   }
 }
