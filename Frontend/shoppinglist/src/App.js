@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Route} from 'react-router-dom';
-import Dashboard from './Screens/Dashboard';
+import Dashboard from './Components/Dashboard';
 
 class App extends Component {
     render() {

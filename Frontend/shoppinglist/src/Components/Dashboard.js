@@ -3,6 +3,7 @@ import React from 'react';
 
 import './Dashboard.css';
 
+
 class Dashboard extends React.Component {
 
     constructor(props) {
@@ -10,6 +11,7 @@ class Dashboard extends React.Component {
         super(props);
 
         this.state = ({
+
 
            test: null,
 
@@ -28,6 +30,8 @@ class Dashboard extends React.Component {
     }
 
 
+
+
     fetchData() {
 
       // API connection
@@ -42,7 +46,7 @@ class Dashboard extends React.Component {
                   Hello
                 </header>
                 <main>
-                  Hello
+
                 </main>
                 <footer>
 

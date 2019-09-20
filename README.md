@@ -25,8 +25,8 @@ This README is about how we generated a test Frontend for the Backend Examples "
 >  npm install --save react-router-dom
 
 
-- We need then a .babelrc, index.html and index.jsx file
-- We generated a "src" folder, inside of this folder we generated a App.jsx and App.css file.
+- We need then a .babelrc, index.html and index.js file
+- We generated a "src" folder, inside of this folder we generated a App.js and App.css file.
 - With "npm start" we can start the frontend. It is running on http://localhost:1234
 
 ### Alternative Installation ###
