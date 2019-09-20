@@ -1,0 +1,29 @@
+{
+  "name": "shoppinglist",
+  "version": "1.0.0",
+  "description": "Studienprojekt",
+  "main": "index.jsx",
+  "private": true,
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick Auer und Heiko Fischer",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.6.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.12.3",
+    "postcss-modules": "^1.4.1",
+    "sass": "^1.22.12"
+  }
+}

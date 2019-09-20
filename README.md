@@ -1,29 +1,38 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This README is about how we generated a test Frontend for the Backend Examples "Hystrix and Resilience4j.
 
-### What is this repository for? ###
+## Frontend ##
+### How to generate a React Project from scratch ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+- Run Command "npm init" to generate a package.json file in the correct folder. (/Frontend/shoppinglist)
+- Write down all important informations about the project (version, author, license, description, ...)
+- Open the package.json file and check it. Add a line with "private:true,"
+- We used "parcel" for the react project. So we added also the line {"start": "parcel index.html", "build": "parcel build index.html"} after "scripts"
+- Now we installed all important react things
+>  npm install --save react
 
-### How do I get set up? ###
+>  npm install --save react-dom
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+>  npm install --save-dev babel-preset-env
 
-### Contribution guidelines ###
+>  npm install --save-dev babel-preset-react / npm install --save-dev @babel/preset-react
 
-* Writing tests
-* Code review
-* Other guidelines
+>  npm install --save-dev parcel-bundler / npm install parcel-bundler --save-dev / npm install -g parcel-bundler
 
-### Who do I talk to? ###
+>  npm install --save-dev sass
 
-* Repo owner or admin
-* Other community or team contact
+>  npm install --save react-router-dom
+
+
+- We need then a .babelrc, index.html and index.jsx file
+- We generated a "src" folder, inside of this folder we generated a App.jsx and App.css file.
+- With "npm start" we can start the frontend. It is running on http://localhost:1234
+
+### Alternative Installation ###
+
+> npx create-react-app shoppinglist 
+
+> cd shoppinglist 
+
+> npm start
