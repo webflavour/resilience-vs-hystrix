@@ -7,7 +7,8 @@ Unter "Backend" befinden sich die beiden Varianten Hystrix und Resilience4j wied
 Unter "Frontend" befindet sich ein Beispiel Anwendung umgesetzt mit ReactJS. 
 
 ## Frontend ##
-Um den Client zu starten wird NodeJS auf der lokalen Maschine benÃ¶tigt. 
+Um den Client zu starten wird NodeJS auf der lokalen Maschine benötigt. In der Konsole unter dem korrekten Ordner /Frontend/shoppinglist sind die Befehle npm install und npm start auszuführen.
+
 ### How to generate a React Project from scratch ###
 
 - Run Command "npm init" to generate a package.json file in the correct folder. (/Frontend/shoppinglist)
