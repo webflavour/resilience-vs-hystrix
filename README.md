@@ -1,8 +1,13 @@
-# README #
+# Studienarbeit - Vergleich zwischen Hystrix und Resilience4j an einem Beispiel.
 
-This README is about how we generated a test Frontend for the Backend Examples "Hystrix and Resilience4j.
+In diesem Repository ist die komplette Studienarbeit gespeichert.
+
+Unter "Backend" befinden sich die beiden Varianten Hystrix und Resilience4j wieder.
+
+Unter "Frontend" befindet sich ein Beispiel Anwendung umgesetzt mit ReactJS. 
 
 ## Frontend ##
+Um den Client zu starten wird NodeJS auf der lokalen Maschine benötigt. 
 ### How to generate a React Project from scratch ###
 
 - Run Command "npm init" to generate a package.json file in the correct folder. (/Frontend/shoppinglist)
@@ -36,3 +41,4 @@ This README is about how we generated a test Frontend for the Backend Examples "
 > cd shoppinglist 
 
 > npm start
+
