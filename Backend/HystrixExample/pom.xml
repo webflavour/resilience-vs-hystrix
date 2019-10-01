@@ -10,6 +10,6 @@
 
     <modules>
       <module>shoppinglist</module>
-      <module>reading</module>
+     <!-- <module>reading</module> -->
     </modules>
 </project>
