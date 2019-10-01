@@ -1,0 +1,16 @@
+.jumbotron {
+    background: #03a596;
+    width: 100%;
+    margin-bottom: 4em;
+    color: #ffffff;
+    font-weight: thin;
+}
+.jumbotron p {
+    font-size: 1.2rem;
+    font-weight: thin;
+    padding: 1em 0 0 0;
+}
+
+.jumbotron h1 {
+    font-weight: thin;
+}
