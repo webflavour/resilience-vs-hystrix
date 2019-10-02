@@ -12,11 +12,14 @@ Um den Client zu starten wird NodeJS auf der lokalen Maschine benoetigt. In der 
 ### Installation von ReactJS Application ###
 
 > npx create-react-app app 
+
 > cd app
 
 Zusätzlich eingebunden wurde:
 > npm install axios für RestAPI
+
 > npm i --save @fortawesome/react-fontawesome
+
 > npm i --save @fortawesome/free-solid-svg-icons
 
 Sowie die Library Ant.Design
@@ -24,6 +27,7 @@ Sowie die Library Ant.Design
 
 ### Start der ReactJS Application ###
 > npm install
+
 > npm start
 
 ### Alternative: How to generate a React Project from scratch ###
