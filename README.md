@@ -2,9 +2,8 @@
 
 In diesem Repository ist die komplette Studienarbeit gespeichert.
 
-Unter "Backend" befinden sich die beiden Varianten Hystrix und Resilience4j wieder.
-
-Unter "Frontend" befindet sich ein Beispiel Anwendung umgesetzt mit ReactJS. 
+Unter "Backend" befinden sich die beiden Varianten Hystrix und Resilience4j wieder. Backend läuft unter http://localhost:8080
+Unter "Frontend" befindet sich ein Beispiel Anwendung umgesetzt mit ReactJS. Frontend läuft utner http://localhost:3000
 
 ## Frontend ##
 Um den Client zu starten wird NodeJS auf der lokalen Maschine benoetigt. In der Konsole unter dem korrekten Ordner /Frontend/app sind die Befehle npm install und npm start auszufuehren.
