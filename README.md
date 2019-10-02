@@ -7,9 +7,26 @@ Unter "Backend" befinden sich die beiden Varianten Hystrix und Resilience4j wied
 Unter "Frontend" befindet sich ein Beispiel Anwendung umgesetzt mit ReactJS. 
 
 ## Frontend ##
-Um den Client zu starten wird NodeJS auf der lokalen Maschine ben�tigt. In der Konsole unter dem korrekten Ordner /Frontend/shoppinglist sind die Befehle npm install und npm start auszuf�hren.
+Um den Client zu starten wird NodeJS auf der lokalen Maschine benoetigt. In der Konsole unter dem korrekten Ordner /Frontend/app sind die Befehle npm install und npm start auszufuehren.
 
-### How to generate a React Project from scratch ###
+### Installation von ReactJS Application ###
+
+> npx create-react-app app 
+> cd app
+
+Zusätzlich eingebunden wurde:
+> npm install axios für RestAPI
+> npm i --save @fortawesome/react-fontawesome
+> npm i --save @fortawesome/free-solid-svg-icons
+
+Sowie die Library Ant.Design
+> npm install antd
+
+### Start der ReactJS Application ###
+> npm install
+> npm start
+
+### Alternative: How to generate a React Project from scratch ###
 
 - Run Command "npm init" to generate a package.json file in the correct folder. (/Frontend/shoppinglist)
 - Write down all important informations about the project (version, author, license, description, ...)
@@ -45,11 +62,5 @@ Einbinden von Fontawesome und SVG Icons:
 - We generated a "src" folder, inside of this folder we generated a App.js and App.css file.
 - With "npm start" we can start the frontend. It is running on http://localhost:1234
 
-### Alternative Installation ###
 
-> npx create-react-app shoppinglist 
-
-> cd shoppinglist 
-
-> npm start
 
