@@ -4,16 +4,22 @@ import NewItem from "./components/AddItem";
 import Item from "./components/Item";
 import Filter from "./components/Filter";
 
+
+// Hier kommt serverUrl der API, wenn Hystrix oder Resilience als Backend laufen, sonst ist Mock API angebunden für Testzwecke
+
+// export const serverUrl = 'http://localhost:8080/';
+
 const List = () => {
     const [list, setList] = React.useState([]);
     const [newItem, setNewItem] = React.useState("");
     const [loading, setLoading] = React.useState(false);
     const [filter, setFilter] = React.useState("all");
 
-    
+
 
     React.useEffect(() => {
         setLoading(true);
+        /*fetch (this.serverUrl + '/api/read'),*/
         fetch("https://5cfabdcbf26e8c00146d0b0e.mockapi.io/tasks")
             .then(resp => resp.json())
             .then(data => data.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1)))
@@ -24,6 +30,7 @@ const List = () => {
     const addItem = () => {
         if (!newItem) return;
         setLoading(true);
+        /*fetch (this.serverUrl + '/api/order/add'),*/
         fetch("https://5cfabdcbf26e8c00146d0b0e.mockapi.io/tasks", {
             method: "POST",
             headers: {
@@ -52,6 +59,7 @@ const List = () => {
         const { id, done } = item;
 
         setLoading(true);
+        /*fetch (this.serverUrl + '/api/read'),*/
         fetch(`https://5cfabdcbf26e8c00146d0b0e.mockapi.io/tasks/${id}`, {
             method: "PUT",
             headers: {
@@ -83,6 +91,7 @@ const List = () => {
     const removeItem = item => {
         const { id } = item;
         setLoading(true);
+        /*fetch (this.serverUrl + `/api/order/delete/${id}`),*/
         fetch(`https://5cfabdcbf26e8c00146d0b0e.mockapi.io/tasks/${id}`, {
             method: "DELETE",
             headers: {
