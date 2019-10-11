@@ -1,12 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import List from './requestService';
+import "./index.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import * as serviceWorker from './serviceWorker';
+function App() {
+    return (
+        <div className="container">
+            <div className="row">
+                <div className="col">
+                    <h1>Einkaufsliste</h1>
+                    <hr />
+                </div>
+            </div>
+            <List />
+        </div>
+    );
+}
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your _oldApp to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);

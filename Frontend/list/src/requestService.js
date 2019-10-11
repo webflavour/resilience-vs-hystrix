@@ -3,25 +3,27 @@ import ListHeaders from './components/ListHeader';
 import NewItem from "./components/AddItem";
 import Item from "./components/Item";
 import Filter from "./components/Filter";
-
+import useFetch from "./Hooks/use-fetch";
 
 // Hier kommt serverUrl der API, wenn Hystrix oder Resilience als Backend laufen, sonst ist Mock API angebunden für Testzwecke
 
-// export const serverUrl = 'http://localhost:8080/';
+
 
 const List = () => {
     const [list, setList] = React.useState([]);
     const [newItem, setNewItem] = React.useState("");
     const [loading, setLoading] = React.useState(false);
     const [filter, setFilter] = React.useState("all");
-
-
+    const itemApi = useFetch(
+        "https://5cfabdcbf26e8c00146d0b0e.mockapi.io/tasks"
+  /*  const itemApi = useFetch(
+        "http://localhost:8080/"*/
+    );
 
     React.useEffect(() => {
         setLoading(true);
-        /*fetch (this.serverUrl + '/api/read'),*/
-        fetch("https://5cfabdcbf26e8c00146d0b0e.mockapi.io/tasks")
-            .then(resp => resp.json())
+        itemApi
+            .get()
             .then(data => data.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1)))
             .then(data => setList(data));
         setLoading(false);
@@ -30,21 +32,13 @@ const List = () => {
     const addItem = () => {
         if (!newItem) return;
         setLoading(true);
-        /*fetch (this.serverUrl + '/api/order/add'),*/
-        fetch("https://5cfabdcbf26e8c00146d0b0e.mockapi.io/tasks", {
-            method: "POST",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
+        itemApi
+            .post({
                 description: newItem,
                 createdAt: new Date().toISOString(),
                 done: false,
                 updatedAt: ""
             })
-        })
-            .then(resp => resp.json())
             .then(data => {
                 const newList = [...list, data].sort((a, b) =>
                     a.createdAt < b.createdAt ? 1 : -1
@@ -59,19 +53,11 @@ const List = () => {
         const { id, done } = item;
 
         setLoading(true);
-        /*fetch (this.serverUrl + '/api/read'),*/
-        fetch(`https://5cfabdcbf26e8c00146d0b0e.mockapi.io/tasks/${id}`, {
-            method: "PUT",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
+        itemApi
+            .put(id, {
                 done: !done,
                 updatedAt: new Date().toISOString()
             })
-        })
-            .then(resp => resp.json())
             .then(data => {
                 const newList = list
                     .map(l => {
@@ -91,22 +77,13 @@ const List = () => {
     const removeItem = item => {
         const { id } = item;
         setLoading(true);
-        /*fetch (this.serverUrl + `/api/order/delete/${id}`),*/
-        fetch(`https://5cfabdcbf26e8c00146d0b0e.mockapi.io/tasks/${id}`, {
-            method: "DELETE",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json"
-            }
-        })
-            .then(resp => resp.json())
-            .then(data => {
-                const newList = list
-                    .filter(l => l.id !== data.id)
-                    .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
-                setList(newList);
-                setLoading(false);
-            });
+        itemApi.del(id).then(data => {
+            const newList = list
+                .filter(l => l.id !== data.id)
+                .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
+            setList(newList);
+            setLoading(false);
+        });
     };
 
     const filteredList = list.filter(

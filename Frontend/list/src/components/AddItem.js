@@ -10,7 +10,7 @@ const AddItem = props => {
         <input
             className="form-control"
             value={newItem}
-            placeholder="Add New Task"
+            placeholder="Etwas der Einkaufsliste hinzufügen"
             onKeyUp={keyUpHandler}
             onChange={event => setNewItem(event.target.value)}
         />
