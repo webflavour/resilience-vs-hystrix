@@ -6,7 +6,7 @@ Unter "Backend" befinden sich die beiden Varianten Hystrix und Resilience4j wied
 Unter "Frontend" befindet sich ein Beispiel Anwendung umgesetzt mit ReactJS. Frontend läuft utner http://localhost:3000
 
 ## Frontend ##
-Um den Client zu starten wird NodeJS auf der lokalen Maschine benoetigt. In der Konsole unter dem korrekten Ordner /Frontend/app sind die Befehle npm install und npm start auszufuehren.
+Um den Client zu starten wird NodeJS auf der lokalen Maschine benoetigt. In der Konsole unter dem korrekten Ordner /Frontend/list sind die Befehle npm install und npm start auszufuehren.
 
 ### Installation von ReactJS Application ###
 

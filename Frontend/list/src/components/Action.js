@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from 'react-bootstrap';
+
 const Action = props => {
     const { completeItem, removeItem, item } = props;
     const iconClass =
@@ -13,14 +14,14 @@ const Action = props => {
           onClick={() => completeItem(item)}
           title="Complete Item"
       >
-        <i className={iconClass} />
+        <i className={iconClass} />Im Einkaufswagen
       </Button>
       <Button
           variant="danger"
           className="btn btn-light"
           title="Remove Item"
           onClick={() => removeItem(item)}
-      >
+      >Löschen
         <i className="fa fa-trash red" />
       </Button>
     </span>
