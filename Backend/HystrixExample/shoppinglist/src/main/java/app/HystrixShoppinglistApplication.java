@@ -1,4 +1,4 @@
-package app;
+package app.studienprojekt;
 
 import app.model.Order;
 import app.model.OrderRepository;
@@ -22,43 +22,12 @@ public class HystrixShoppinglistApplication {
     OrderRepository orderRepository;
 
  @CrossOrigin
-  @RequestMapping(value = "/api/read")
+  @RequestMapping(value = "/api/read", method = RequestMethod.GET)
   public String readingList(){
     return "Apfel, Birne, Salat";
   }
 
- @CrossOrigin
- @RequestMapping(value = "/api/order/add", method = RequestMethod.POST)
-    public ResponseEntity<Void> addOrder(@RequestBody String order) {
-        try {
-            if (order != null && order != "") {
-                orderRepository.save(new Order(order));
-                System.out.println("The order: '" + order + "' was added.");
-                return new ResponseEntity<>(HttpStatus.CREATED);
-            }
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
-        catch (Exception e) {
-            System.out.println(e);
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
 
-         @CrossOrigin
-       @RequestMapping(value = "/api/order/delete/{id}", method = RequestMethod.DELETE)
-       public ResponseEntity<Void> removeOrder(@PathVariable("id") int id) {
-           try {
-                   if (orderRepository.existsById(id)) {
-                       orderRepository.deleteById(id);
-                       System.out.println("The order: " + id + " was deleted." );
-                       return new ResponseEntity<>(HttpStatus.OK);
-                   }
-                   return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-               }
-           catch(Exception e) {
-               System.out.println(e);
-               return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-           }
        }
 
   public static void main(String[] args) {
