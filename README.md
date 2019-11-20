@@ -42,4 +42,8 @@ Um das jeweilige Backend Hystrix oder Resilience4j zu starten, wird Apache Maven
 ### Start einer Backendanwendung ###
 > entsprechenden Pfad des Backends öffnen
 
-> mvn run (http://localhost:8080)
+> mvn clean 
+
+> mvn install
+
+> mvn package
