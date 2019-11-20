@@ -1,7 +1,7 @@
 package app;
 
-import app.model.Order;
-import app.model.OrderRepository;
+import model.Order;
+import model.OrderRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @SpringBootApplication
@@ -33,13 +34,13 @@ public class ResilienceShoppinglistApplication {
             if (order != null && order != "") {
                 orderRepository.save(new Order(order));
                 System.out.println("The order: '" + order + "' was added.");
-                return new ResponseEntity<>(HttpStatus.CREATED);
+                return new ResponseEntity(HttpStatus.CREATED);
             }
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
         catch (Exception e) {
             System.out.println(e);
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
@@ -50,13 +51,13 @@ public class ResilienceShoppinglistApplication {
                    if (orderRepository.existsById(id)) {
                        orderRepository.deleteById(id);
                        System.out.println("The order: " + id + " was deleted." );
-                       return new ResponseEntity<>(HttpStatus.OK);
+                       return new ResponseEntity(HttpStatus.OK);
                    }
-                   return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+                   return new ResponseEntity(HttpStatus.NOT_FOUND);
                }
            catch(Exception e) {
                System.out.println(e);
-               return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+               return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
            }
        }
 

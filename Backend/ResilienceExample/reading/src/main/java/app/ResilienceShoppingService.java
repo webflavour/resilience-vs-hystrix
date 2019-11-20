@@ -1,24 +1,30 @@
 package app;
 
 import io.github.resilience4j.bulkhead.Bulkhead;
+import io.github.resilience4j.bulkhead.BulkheadRegistry;
 import io.github.resilience4j.bulkhead.BulkheadConfig;
 import io.github.resilience4j.circuitbreaker.CircuitBreaker;
 import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig;
 import io.github.resilience4j.ratelimiter.RateLimiter;
 import io.github.resilience4j.ratelimiter.RateLimiterConfig;
+import io.github.resilience4j.timelimiter.TimeLimiter;
+
 import java.time.Duration;
 import java.util.function.Function;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
 import java.util.Objects;
 import java.util.concurrent.*;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
+import java.util.*;
 
 
 @Service
-public class Resilience4jShoppingService {
+public class ResilienceShoppingService {
 
     private final CircuitBreaker circuitBreaker;
     private final Bulkhead bulkhead;
@@ -31,33 +37,16 @@ public class Resilience4jShoppingService {
     @Autowired
     private RestTemplate restTemplate;
 
-    public Resilience4jShoppingService() {
+    public ResilienceShoppingService() {
 
-/**    // Create a custom configuration for a CircuitBreaker
-//    CircuitBreakerConfig circuitBreakerConfig = CircuitBreakerConfig.custom()
-//        .failureRateThreshold(50)
-//        .waitDurationInOpenState(Duration.ofMillis(10000))
-//        .ringBufferSizeInHalfOpenState(2)
-//        .ringBufferSizeInClosedState(4)
-//        .enableAutomaticTransitionFromOpenToHalfOpen()
-//        .build();
-//    // Create a CircuitBreakerRegistry with a custom global configuration
-        //CircuitBreakerRegistry circuitBreakerRegistry = CircuitBreakerRegistry.(circuitBreakerConfig);
-**/
-// Create a custom configuration for a Bulkhead
         BulkheadConfig config = BulkheadConfig.custom()
                 .maxConcurrentCalls(150)
                 .maxWaitDuration(Duration.ofMillis(500))
                 .build();
         BulkheadRegistry registry = BulkheadRegistry.of(config);
+        bulkhead = Bulkhead.of("apiCall", BulkheadConfig.ofDefaults());
+        chainedCallable = Bulkhead.decorateFunction(bulkhead, this::restrictedCall);
 
-        Bulkhead bulkheadWithCustomConfig = registry.bulkhead("apiCall", custom());
-        /** bulkhead = Bulkhead.of("apiCall", BulkheadConfig.ofDefaults());**/
-
-
-        chainedCallable<Integer, Integer> decorated
-                = Bulkhead.decorateFunction(bulkhead, service::restrictedCall);
-       /**chainedCallable = Bulkhead.decorateFunction(Bulkhead, this::restrictedCall);**/
 
         circuitBreaker = CircuitBreaker.of("apiCall", CircuitBreakerConfig.custom()
                 .failureRateThreshold(50)
@@ -65,14 +54,14 @@ public class Resilience4jShoppingService {
                 .ringBufferSizeInHalfOpenState(2)
                 .ringBufferSizeInClosedState(2)
                 .build());
-        /**chainedCallable = CircuitBreaker.decorateFunction(circuitBreaker, this::restrictedCall);**/
+        chainedCallable = CircuitBreaker.decorateFunction(circuitBreaker, this::restrictedCall);
 
         rateLimiter = RateLimiter.of("apiCall", RateLimiterConfig.custom()
                 .limitRefreshPeriod(Duration.ofSeconds(1))
                 .limitForPeriod(10)
                 .timeoutDuration(Duration.ofSeconds(2))
                 .build());
-        /**chainedCallable = RateLimiter.decorateFunction(rateLimiter, this::restrictedCall);**/
+        chainedCallable = RateLimiter.decorateFunction(rateLimiter, this::restrictedCall);
     }
 
     public String callApi(String api) {
