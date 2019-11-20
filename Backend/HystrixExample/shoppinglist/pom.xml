@@ -3,13 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>app.studienarbeit</groupId>
-  <artifactId>shoppinglist</artifactId>
+  <groupId>app.studienprojekt</groupId>
+  <artifactId>hystrix</artifactId>
   <version>0.0.1</version>
   <packaging>jar</packaging>
+  <name>hystrix</name>
 
-  <name>shoppinglist</name>
-  <description>Studienarbeit - Projekt</description>
+  <description>Studienprojekt - Hystrix</description>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -64,13 +64,7 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>2.2.1</version>
-      </plugin>
-
-      <plugin>
-        <inherited>true</inherited>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.2.1.RELEASE</version>
       </plugin>
     </plugins>
   </build>

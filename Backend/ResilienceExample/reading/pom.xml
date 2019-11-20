@@ -9,6 +9,9 @@
 	<version>0.3.1</version>
 	<name>resilience</name>
 
+	<description>Studienprojekt - Resilience</description>
+
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<compiler.jdk.version>1.7</compiler.jdk.version>

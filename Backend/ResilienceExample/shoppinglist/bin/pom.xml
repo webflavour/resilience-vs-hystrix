@@ -8,7 +8,6 @@
   <packaging>jar</packaging>
   <version>0.3.1</version>
   <name>resilience</name>
-  <description>Studienprojekt - Resilience</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
