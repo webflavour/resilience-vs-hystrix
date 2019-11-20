@@ -1,4 +1,4 @@
-package app.studienprojekt;
+package app;
 
 import app.model.Order;
 import app.model.OrderRepository;

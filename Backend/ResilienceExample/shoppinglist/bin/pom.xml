@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>app.studienprojekt</groupId>
+  <groupId>app</groupId>
   <artifactId>resilience</artifactId>
   <packaging>jar</packaging>
   <version>0.3.1</version>
@@ -16,7 +16,11 @@
   </properties>
 
   <dependencies>
-
+    <dependency>
+      <groupId>org.hibernate.javax.persistence</groupId>
+      <artifactId>hibernate-jpa-2.1-api</artifactId>
+      <version>1.0.0.Final</version>
+    </dependency>
 
   </dependencies>
 
@@ -25,7 +29,7 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>2.2.1</version>
+        <version>2.2.1.VERSION</version>
       </plugin>
 
 

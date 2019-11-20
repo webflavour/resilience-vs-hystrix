@@ -1,4 +1,4 @@
-package HystrixExample.reading.src.main.java.app;
+package app;
 
 import io.micrometer.core.instrument.binder.hystrix.HystrixMetricsBinder;
 import org.springframework.boot.SpringApplication;

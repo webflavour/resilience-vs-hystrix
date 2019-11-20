@@ -24,6 +24,6 @@ public class HystrixApi extends HystrixCommand<String> {
 
     @Override
     protected String run() {
-        return restTemplate.getForObject("http://localhost:8888/" + api, String.class);
+        return restTemplate.getForObject("http://localhost:8080/" + api, String.class);
     }
 }

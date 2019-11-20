@@ -12,13 +12,13 @@ public class HystrixShoppingService {
 
   private final RestTemplate restTemplate;
 
-  public ShoppingService(RestTemplate rest) {
+  public HystrixShoppingService(RestTemplate rest) {
     this.restTemplate = rest;
   }
 
   @HystrixCommand(fallbackMethod = "reliable")
   public String readingList() {
-    URI uri = URI.create("http://localhost:8090/recommended");
+    URI uri = URI.create("http://localhost:8080/recommended");
 
     return this.restTemplate.getForObject(uri, String.class);
   }
