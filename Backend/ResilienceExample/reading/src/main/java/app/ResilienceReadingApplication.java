@@ -37,10 +37,10 @@ public class ResilienceReadingApplication {
         return service.callApi(api);
     }
 
-    @RequestMapping("/api/{api}")
+   /** @RequestMapping("/api/{api}")
     public String toReadThis(@PathVariable String api) {
         return service.readingList(api);
-    }
+    }**/
 
 
     public static void main(String[] args) {

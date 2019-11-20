@@ -44,7 +44,7 @@ public class ReadingApplicationTests {
 
     @Test
     public void toReadTest() {
-        this.server.expect(requestTo("http://localhost:8090/recommended"))
+        this.server.expect(requestTo("http://localhost:8080/recommended"))
                 .andExpect(method(HttpMethod.GET)).
                 andRespond(withSuccess("lists", MediaType.TEXT_PLAIN));
         String lists = testRestTemplate.getForObject("/to-read", String.class);
@@ -53,7 +53,7 @@ public class ReadingApplicationTests {
 
     @Test
     public void toReadFailureTest() {
-        this.server.expect(requestTo("http://localhost:8090/recommended")).
+        this.server.expect(requestTo("http://localhost:8080/recommended")).
                 andExpect(method(HttpMethod.GET)).andRespond(withServerError());
         String lists = testRestTemplate.getForObject("/to-read", String.class);
         assertThat(lists).isEqualTo("Birne");

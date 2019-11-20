@@ -45,7 +45,7 @@ public class ResilienceShoppingService {
                 .build();
         BulkheadRegistry registry = BulkheadRegistry.of(config);
         bulkhead = Bulkhead.of("apiCall", BulkheadConfig.ofDefaults());
-        chainedCallable = Bulkhead.decorateFunction(bulkhead, this::restrictedCall);
+       /** chainedCallable = Bulkhead.decorateFunction(bulkhead, this::restrictedCall);**/
 
 
         circuitBreaker = CircuitBreaker.of("apiCall", CircuitBreakerConfig.custom()
@@ -61,7 +61,7 @@ public class ResilienceShoppingService {
                 .limitForPeriod(10)
                 .timeoutDuration(Duration.ofSeconds(2))
                 .build());
-        chainedCallable = RateLimiter.decorateFunction(rateLimiter, this::restrictedCall);
+        /**chainedCallable = RateLimiter.decorateFunction(rateLimiter, this::restrictedCall);**/
     }
 
     public String callApi(String api) {
