@@ -25,7 +25,7 @@ public class HystrixShoppingService {
 
 
   public String callApi(String api) {
-    return new ApiHystrixCommand(restTemplate, api).execute();
+    return new HystrixApi(restTemplate, api).execute();
   }
 
   public String reliable() {
