@@ -17,9 +17,12 @@
 		<compiler.jdk.version>1.7</compiler.jdk.version>
 		<scala.version>2.10.2</scala.version>
 		<maven.compiler.release>11</maven.compiler.release>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
+		<dependency> <groupId>com.apple</groupId> <artifactId>AppleJavaExtensions</artifactId> <version>1.4</version> </dependency>
 		<dependency>
 			<groupId>io.github.resilience4j</groupId>
 			<artifactId>resilience4j-circuitbreaker</artifactId>
