@@ -1,4 +1,4 @@
-# Studienarbeit - Vergleich zwischen Hystrix und Resilience4j an einem Beispiel.
+# Studienarbeit - Resilience4j bei Microservices –Gegenüberstellung Hystrix anhand einer Beispielanwendung
 
 In diesem Repository ist die komplette Studienarbeit von Patrick Auer und Heiko Fischer gespeichert. Das Reposiotry beinhaltet:
 > Backend Entwicklung für Hystrix und Resilience4j
@@ -39,8 +39,13 @@ Sowie die Library Ant.Design
 ## Backend ##
 Um das jeweilige Backend Hystrix oder Resilience4j zu starten, wird Apache Maven Project benötigt, sowie eine Java SDK auf dem lokalen System. 
 
+Zusatzmodul: 
+
+> Spring Boot
+
+
 ### Start einer Backendanwendung ###
-> entsprechenden Pfad des Backends öffnen
+entsprechenden Pfad des Backends öffnen
 
 > mvn clean 
 
