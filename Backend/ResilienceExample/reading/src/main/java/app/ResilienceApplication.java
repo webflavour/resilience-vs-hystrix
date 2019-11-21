@@ -5,9 +5,9 @@ package app;
 
 
 @SpringBootApplication
-public class ResilienceReadingApplication {
+public class ResilienceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ResilienceReadingApplication.class, args);
+        SpringApplication.run(ResilienceApplication.class, args);
     }
 }

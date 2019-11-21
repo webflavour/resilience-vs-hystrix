@@ -12,7 +12,7 @@ public class HystrixApi extends HystrixCommand<String> {
     private final RestTemplate restTemplate;
     private final String api;
 
-    public HystrixApi (RestTemplate restTemplate, String api) {
+    public HystrixApi(RestTemplate restTemplate, String api) {
 
         super(Setter.withGroupKey(HystrixCommandGroupKey.Factory.asKey(COMMAND_GROUP_KEY))
                 .andCommandKey(HystrixCommandKey.Factory.asKey("apiCall"))

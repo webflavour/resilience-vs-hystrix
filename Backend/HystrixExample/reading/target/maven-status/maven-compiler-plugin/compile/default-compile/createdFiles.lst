@@ -1,3 +1,5 @@
+app\HystrixController.class
+app\SpringConfiguration.class
+app\HystrixApplication.class
 app\HystrixApi.class
-app\HystrixReadingApplication.class
-app\HystrixShoppingService.class
+app\HystrixService.class
