@@ -1,18 +1,29 @@
-//package app;
-//
-//import org.junit.Test;
-//import org.junit.runner.RunWith;
+package app;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.boot.test.autoconfigure.web.client.RestClientTest;
 //import org.springframework.http.MediaType;
-//import org.springframework.test.context.junit4.SpringRunner;
 //import org.springframework.test.web.client.MockRestServiceServer;
-//
 //import static org.assertj.core.api.Assertions.assertThat;
 //import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
 //import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
-//
-//
+
+/**@RunWith(SpringRunner.class)
+@SpringBootTest
+public class ShoppingServiceTests {
+
+    @Test
+    public void contextLoads() {
+    }
+
+}**/
+
+
 //@RunWith(SpringRunner.class)
 //@RestClientTest(ShoppingServiceHystrix.class)
 //public class ShoppingServiceTests {

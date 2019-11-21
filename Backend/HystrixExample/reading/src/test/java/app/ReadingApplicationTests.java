@@ -1,23 +1,33 @@
-//package app;
-//
+package app;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 //import org.junit.After;
 //import org.junit.Before;
-//import org.junit.Test;
-//import org.junit.runner.RunWith;
 //import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.boot.test.context.SpringBootTest;
 //import org.springframework.boot.test.web.client.TestRestTemplate;
 //import org.springframework.http.HttpMethod;
 //import org.springframework.http.MediaType;
-//import org.springframework.test.context.junit4.SpringRunner;
 //import org.springframework.test.web.client.MockRestServiceServer;
 //import org.springframework.web.client.RestTemplate;
-//
 //import static org.assertj.core.api.Assertions.assertThat;
 //import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
 //import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
 //import static org.springframework.test.web.client.response.MockRestResponseCreators.withServerError;
 //import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
+
+/** @RunWith(SpringRunner.class)
+@SpringBootTest
+public class ReadingApplicationTests {
+
+    @Test
+    public void contextLoads() {
+    }
+
+}
+**/
 //
 //
 //@RunWith(SpringRunner.class)
