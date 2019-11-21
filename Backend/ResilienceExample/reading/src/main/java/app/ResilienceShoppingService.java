@@ -61,6 +61,12 @@ public class ResilienceShoppingService {
                 .limitForPeriod(10)
                 .timeoutDuration(Duration.ofSeconds(2))
                 .build());
+
+        /** RateLimiterConfig config = RateLimiterConfig.custom().limitForPeriod(2).build();
+        RateLimiterRegistry registry = RateLimiterRegistry.of(config);
+        RateLimiter rateLimiter = registry.rateLimiter("my");
+        Function<Integer, Integer> decorated
+                = RateLimiter.decorateFunction(rateLimiter, service::process); **/
         /**chainedCallable = RateLimiter.decorateFunction(rateLimiter, this::restrictedCall);**/
     }
 
