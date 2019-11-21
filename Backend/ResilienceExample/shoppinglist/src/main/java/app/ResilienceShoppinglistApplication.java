@@ -28,17 +28,17 @@ import java.util.*;
 
 public class ResilienceShoppinglistApplication {
 
- @Autowired
+    @Autowired
     OrderRepository orderRepository;
 
- @CrossOrigin
-  @RequestMapping(value = "/api/read")
-  public String readingList(){
-    return "Apfel, Birne, Salat";
-  }
+    @CrossOrigin
+    @RequestMapping(value = "/api/read")
+    public String readingList() {
+        return "Apfel, Birne, Salat";
+    }
 
- @CrossOrigin
- @RequestMapping(value = "/api/order/add", method = RequestMethod.POST)
+    @CrossOrigin
+    @RequestMapping(value = "/api/order/add", method = RequestMethod.POST)
     public ResponseEntity<Void> addOrder(@RequestBody String order) {
         try {
             if (order != null && order != "") {
@@ -47,31 +47,29 @@ public class ResilienceShoppinglistApplication {
                 return new ResponseEntity(HttpStatus.CREATED);
             }
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println(e);
             return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
-         @CrossOrigin
-       @RequestMapping(value = "/api/order/delete/{id}", method = RequestMethod.DELETE)
-       public ResponseEntity<Void> removeOrder(@PathVariable("id") int id) {
-           try {
-                   if (orderRepository.existsById(id)) {
-                       orderRepository.deleteById(id);
-                       System.out.println("The order: " + id + " was deleted." );
-                       return new ResponseEntity(HttpStatus.OK);
-                   }
-                   return new ResponseEntity(HttpStatus.NOT_FOUND);
-               }
-           catch(Exception e) {
-               System.out.println(e);
-               return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
-           }
-       }
+    @CrossOrigin
+    @RequestMapping(value = "/api/order/delete/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<Void> removeOrder(@PathVariable("id") int id) {
+        try {
+            if (orderRepository.existsById(id)) {
+                orderRepository.deleteById(id);
+                System.out.println("The order: " + id + " was deleted.");
+                return new ResponseEntity(HttpStatus.OK);
+            }
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
+        } catch (Exception e) {
+            System.out.println(e);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 
-  public static void main(String[] args) {
-    SpringApplication.run(ResilienceShoppinglistApplication.class, args);
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(ResilienceShoppinglistApplication.class, args);
+    }
 }

@@ -12,7 +12,9 @@ public class Order {
     private String description;
 
 
-    private Order() {}
+    private Order() {
+    }
+
     public Order(String description) {
         this.description = description;
     }
@@ -20,6 +22,7 @@ public class Order {
     public void setId(Integer id) {
         this.id = id;
     }
+
     public Integer getId() {
         return this.id;
     }
@@ -27,6 +30,7 @@ public class Order {
     public void setDescription(String description) {
         this.description = description;
     }
+
     public String getDescription() {
         return this.description;
     }

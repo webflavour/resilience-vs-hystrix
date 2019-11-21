@@ -24,28 +24,23 @@ import java.util.*;
 
 
 @Service
-public class ResilienceShoppingService {
+public class ResilienceService {
 
     private final CircuitBreaker circuitBreaker;
     private final Bulkhead bulkhead;
     private final RateLimiter rateLimiter;
 
-    private TimeLimiter timeLimiter;
-    private ExecutorService executorService = Executors.newFixedThreadPool(10);
+    // private TimeLimiter timeLimiter;
+    // private ExecutorService executorService = Executors.newFixedThreadPool(10);
     private final Function<String, String> chainedCallable;
 
     @Autowired
     private RestTemplate restTemplate;
 
-    public ResilienceShoppingService() {
+    public ResilienceService() {
 
-        BulkheadConfig config = BulkheadConfig.custom()
-                .maxConcurrentCalls(150)
-                .maxWaitDuration(Duration.ofMillis(500))
-                .build();
-        BulkheadRegistry registry = BulkheadRegistry.of(config);
         bulkhead = Bulkhead.of("apiCall", BulkheadConfig.ofDefaults());
-       /** chainedCallable = Bulkhead.decorateFunction(bulkhead, this::restrictedCall);**/
+        // chainedCallable = Bulkhead.decorateFunction(bulkhead, this::restrictedCall);
 
 
         circuitBreaker = CircuitBreaker.of("apiCall", CircuitBreakerConfig.custom()
@@ -61,13 +56,8 @@ public class ResilienceShoppingService {
                 .limitForPeriod(10)
                 .timeoutDuration(Duration.ofSeconds(2))
                 .build());
+        //chainedCallable = RateLimiter.decorateFunction(rateLimiter, this::restrictedCall);
 
-        /** RateLimiterConfig config = RateLimiterConfig.custom().limitForPeriod(2).build();
-        RateLimiterRegistry registry = RateLimiterRegistry.of(config);
-        RateLimiter rateLimiter = registry.rateLimiter("my");
-        Function<Integer, Integer> decorated
-                = RateLimiter.decorateFunction(rateLimiter, service::process); **/
-        /**chainedCallable = RateLimiter.decorateFunction(rateLimiter, this::restrictedCall);**/
     }
 
     public String callApi(String api) {
