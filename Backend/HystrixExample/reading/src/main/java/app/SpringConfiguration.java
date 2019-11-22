@@ -10,12 +10,12 @@ import org.springframework.web.client.RestTemplate;
 public class SpringConfiguration {
 
     @Bean
-    RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder) {
+    private RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder) {
         return restTemplateBuilder.build();
     }
 
     @Bean
-    HystrixMetricsBinder hystrixMetrics() {
+    private HystrixMetricsBinder hystrixMetrics() {
         return new HystrixMetricsBinder();
     }
 }
