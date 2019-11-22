@@ -5,3 +5,7 @@
 .cache
 /Backend/.metadata/
 /.metadata/
+.idea
+.DS_Store
+*.iml
+target/

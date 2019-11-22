@@ -1,7 +1,7 @@
 package app;
 
-import model.Order;
-import model.OrderRepository;
+import app.model.Order;
+import app.model.OrderRepository;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,14 +13,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
 
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.*;
 
 @RestController
 @SpringBootApplication
@@ -29,7 +25,7 @@ import java.util.*;
 public class ResilienceShoppinglistApplication {
 
     @Autowired
-    OrderRepository orderRepository;
+    private OrderRepository orderRepository;
 
     @CrossOrigin
     @RequestMapping(value = "/api/read")
